@@ -8,17 +8,92 @@
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
       <link rel="stylesheet" href="./style.css">
   <link rel="shortcut icon" href="vin.png" type="image/png">
+  <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+*
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=password], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
 </head>
 <body>
+<p align="right">Welcome ! <font color="blue">//Student Name//</font> <strong>-->><button type="button" onclick="alert('Are you sure you want to exit ?')">Logout!</button></strong></p><hr align="right" width=23%>
+<h2 align="center"><b> Welcome to Ganga Technical Campus's Talent Reward Program - Ganga Scholarship Test Portal</b></h2><hr width=80%>
 
+<marquee behavior="alternate">Today's scholarship test is scheduled for 5:00 PM</marquee><hr width=80%>
+<h2 align="center">Important Notifications for students </h2>
+<hr width=30%>
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2><u>Instructions for Exam</u></h2>
+    <h3>keep in mind the timer running</h3>
+    <br><br>
+   <p align="right"> |||<input type="submit" value="Start Test">|||</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2><u>Test Schedules</u></h2>
+    <h4><ol>
+    <li>April 25, 2019 - 5:00 PM
+    <li>April 28, 2019 - 8:00 PM
+    <li>April 30, 2019 - 11:00 PM
+    </ol></h4>
+  </div>
+</div>
 
-
-
-	<hr width=50%>
-                <h5 align="center">Developed by :- <a href="v.html" target="_blank"><strong><u>Vinay Saurabh </u>(Front End)</strong></a> and  <a href="p.html" target="_blank"><strong><u>Parth Gaba</u> (Back End)</strong></a></h5>
-              <hr width=50%>
-
-
-
+			<hr width=50%>
+            <h5 align="center">Developed by :- <a href="v.html" target="_blank"><strong><u>Vinay Saurabh </u>(Front End)</strong></a> and  <a href="p.html" target="_blank"><strong><u>Parth Gaba</u> (Back End)</strong></a></h5>
+            <hr width=50%>
 </body>
 </html>
