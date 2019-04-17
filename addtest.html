@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Add Test</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+      <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="vin.png" type="image/png">
+  <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+
+</head>
+<body>
+	<p align="right">Welcome <font color="blue">//Faculty name//</font> <strong><button type="button" onclick="alert('Are you sure you want to exit!')">Logout!</button></strong></p><hr align="right" width=20%>
+<h1 align="center">Fill in the add test form accordingly as per the instructions in input boxes:-<hr width=85%></h1>
+<div class="container">
+  <form action="">
+  <label for="tdt">Test date</label>
+    <input type="text" id="1" name="tdt" placeholder="Enter test date in DD/MM/YYYY format">
+    <label for="tdr">Test duration in minutes</label>
+    <input type="text" id="2" name="tdr" placeholder="Enter test duration in minute">
+<label for="tqt">Total no. of questions in excel file</label>
+    <input type="text" id="3" name="tqt" placeholder="Enter total questions which you have set in the uploadable file">
+    <label for="qit">Total no. of questions that should be in test</label>
+    <input type="text" id="4" name="qit" placeholder="Enter total questions which you want to take test for">
+     <label for="atm">Total marks</label>
+    <input type="text" id="5" name="atm" placeholder="Enter total marks for test">
+    <label for="acm">Marks on each correct answer</label>
+    <input type="text" id="6" name="acm" placeholder="Enter marks for each correct answer">
+    <label for="awm">Marks on each wrong answer</label>
+    <input type="text" id="6" name="awm" placeholder="Enter marks for each wrong answer - if you want no negative marking Enter 0">
+  
+    <label for="courses">Courses and Streams</label>
+    <select id="cas" name="cas">
+      <option value="0">Select any one---</option>
+      <option value="1">B.Tech - CSE - Leet</option>
+      <option value="2">B.Tech - CSE</option>
+      <option value="3">B.Tech - EE - Leet</option>
+      <option value="4">B.Tech - EE</option>
+      <option value="5">B.Tech - ME - Leet</option>
+      <option value="6">B.Tech - ME</option>
+      <option value="7">B.Tech - CE - Leet</option>
+      <option value="8">B.Tech - CE</option>
+      <option value="9">M.Tech - ME</option>
+      <option value="10">M.Tech - CE</option>
+      <option value="11">M.Tech - CSE</option>
+      <option value="12">Diploma - Auto - Leet</option>
+      <option value="13">Diploma - Auto</option>
+      <option value="14">Diploma - Electronics - Leet</option>
+      <option value="15">Diploma - Electronics</option>
+      <option value="16">Diploma - EE - Leet</option>
+      <option value="17">Diploma - EE</option>
+      <option value="18">Diploma - ME - Leet</option>
+      <option value="19">Diploma - ME</option>
+      <option value="20">Diploma - CE - Leet</option>
+      <option value="21">Diploma - CE</option>
+      <option value="22">BBA</option>
+      <option value="23">BCA</option>
+      <option value="24">MBA - Finance</option>
+      <option value="25">MBA - HR</option>
+      <option value="26">MBA - Accounts</option>
+    </select>
+	<input type="file" name="quest in excel" accept=".xlsx">
+    <input type="submit" value="Submit Test">
+  </form>
+</div>
+<hr width=50%>
+                <h5 align="center">Developed by :- <a href="v.html" target="_blank"><strong><u>Vinay Saurabh </u>(Front End)</strong></a> and  <a href="p.html" target="_blank"><strong><u>Parth Gaba</u> (Back End)</strong></a></h5>
+              <hr width=50%>
+
+
+              </body>
+</html>
