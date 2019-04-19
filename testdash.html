@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Dashboard - Ganga Scholarship Test</title>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+      <link rel="stylesheet" href="./style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="vin.png" type="image/png">
+  <style>
+@-webkit-keyframes blinker {
+  from {opacity: 1.0;}
+  to {opacity: 0.0;}
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+.blink{
+	text-decoration: blink;
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: 0.6s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-direction: alternate;
+}body {
+  
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 50px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+	.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+p {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+  color: white;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  float: left;
+  padding: 10px;
+ 
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+</style>
+  <body>
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2><span class="blink"> Keep an eye on the test timer</span></h2>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+   <h2 align="center">You are now on live test portal </h2>
+  </div>
+  <div class="column" style="background-color:#ccc;">
+   <h2 align="right"> Welcome <font color="blue">// Student name//</font> <strong><button type="button" onclick="alert('Are you sure you want to exit!')">Logout!</button></strong></h2>
+  </div>
+</div>
+<div id="navbar">
+ <a class="active" href="javascript:void(0)">Time Left</a>
+  <p id="demo">Stopwatch</p>
+</div>
+<div class="content">
+<div class="row">
+  <div class="column left" style="background-color:#aaa;">
+    <h2>Question Selection Tab</h2><hr>
+
+   <h3 align="left">Below are the stats of your ongoing test.<br><hr>
+    <font color="red">Red</font> ones are marked<br><hr><font color="yellow">
+yellow</font> ones are non-marked</h3><hr>
+<table  border="1px">
+	<tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+	<th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr>
+
+	<tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td>
+	<td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+
+	<tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td>
+	<td>26</td><td>27</td><td>28</td><td>29</td><td>30</td></tr>
+
+	<tr><td>31</td><td>32</td><td>33</td><td>34</td><td>35</td>
+	<td>36</td><td>37</td><td>38</td><td>39</td><td>40</td></tr>
+
+	<tr><td>41</td><td>42</td><td>43</td><td>44</td><td>45</td>
+	<td>46</td><td>47</td><td>48</td><td>49</td><td>50</td></tr>
+	
+</table>
+  </div>
+  <div class="column right" style="background-color:#bbb;">
+    <ol>
+    	<li><h1>Question 1 ?</h1>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label> <hr>
+
+<li><h1>Question 2 ?</h1>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label> <hr>
+
+<li><h1>Question 3 ?</h1>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label> <hr>
+
+<li><h1>Question 4 ?</h1>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label> <hr>
+
+  
+  
+
+  </div>
+</div>
+</div>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Apr 29, 2019 15:21:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML =minutes + "m " + seconds + "  s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Test Duration Expired You must press the final submit button";
+  }
+}, 1000);
+</script>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+  	<hr width=50%>
+                <h5 align="center">Developed by :- <a href="v.html" target="_blank"><strong><u>Vinay Saurabh </u>(Front End)</strong></a> and  <a href="p.html" target="_blank"><strong><u>Parth Gaba</u> (Back End)</strong></a></h5>
+                <hr width=50%>
+</body>
+</html>

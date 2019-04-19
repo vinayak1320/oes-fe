@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Dasboard</title>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+      <link rel="stylesheet" href="./style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="vin.png" type="image/png">
+  <style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.button {
+  border-radius: 7px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+
+</head>
+<body>
+<p align="right">Welcome <font color="blue">Administrator</font> to your control panel -->> <strong><button type="button" onclick="alert('Are you sure you want to exit!')">Logout!</button></strong></p><hr align="right" width=33%>
+<div class="navbar">
+
+  <div class="dropdown">
+    <button class="button">Student
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Add New Student</a>
+      <a href="#">Remove Existing Students</a>
+      <a href="#">Details About Registered Students</a>
+      <a href="#">Ranking Of Students</a>
+    </div>
+  </div> 
+   <div class="dropdown">
+    <button class="button">Faculty
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+       <a href="#">Add New Faculty</a>
+      <a href="#">Remove Existing Faculty</a>
+      <a href="#">Details About Faculty</a>
+      <a href="#">Tests Submitted by Faculties</a>
+    </div>
+  </div> 
+<div class="dropdown">
+    <button class="button">Tests
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+       <a href="#">Create a new Test</a>
+      <a href="#">Remove Old Tests</a>
+      <a href="#">Details of Tests</a>
+      <a href="#">Start Today's Test</a>
+      <a href="#">End Today's Test</a>
+    </div>
+  </div> 
+  <div class="dropdown">
+    <button class="button">Export
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+       <a href="#">Export Student Details with Ranking</a>
+      <a href="#">Export Faculty and Tests Details</a>
+      <a href="#">Export Test Schedules</a>
+    </div>
+  </div> 
+</div><br><br>
+<div style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th><u>Student Name</u></th>
+      <th><u>Email</u></th>
+      <th><u>Mobile</u></th>
+      <th><u>Course and Stream</u></th>
+      <th><u>Registration Date</u></th>
+      <th><u>Test Date</u></th>
+      <th><u>Test %</u></th>
+      <th><u>Test Ranking</u></th>
+    </tr>
+    <tr>
+      <td>Jill</td>
+      <td>Jill@gmail.com</td>
+      <td>9990556075</td>
+      <td>B.Tech CSE</td>
+      <td>12 / 04 / 2019</td>
+      <td>25 / 04 / 2019</td>
+      <td>99 %</td>
+      <td>0001</td>
+          </tr>
+    <tr>
+      <td>Jill</td>
+      <td>Jill@gmail.com</td>
+      <td>9990556075</td>
+      <td>B.Tech CSE</td>
+      <td>12 / 04 / 2019</td>
+      <td>25 / 04 / 2019</td>
+      <td>95 %</td>
+      <td>0002</td>
+          </tr>
+          <tr>
+      <td>Jill</td>
+      <td>Jill@gmail.com</td>
+      <td>9990556075</td>
+      <td>B.Tech CSE</td>
+      <td>12 / 04 / 2019</td>
+      <td>25 / 04 / 2019</td>
+      <td>94 %</td>
+      <td>0003</td>
+          </tr>
+                   <tr><td>a</td><td></td><td></td><td></td> <td></td><td></td><td></td><td></td></tr>
+                   <tr><td>a</td><td></td><td></td><td></td> <td></td><td></td><td></td><td></td></tr>
+                   <tr><td>a</td><td></td><td></td><td></td> <td></td><td></td><td></td><td></td></tr>
+                   <tr><td>a</td><td></td><td></td><td></td> <td></td><td></td><td></td><td></td></tr>
+                   <tr><td>a</td><td></td><td></td><td></td> <td></td><td></td><td></td><td></td></tr>
+                   <tr><td>a</td><td></td><td></td><td></td> <td></td><td></td><td></td><td></td></tr>
+                   <tr><td>a</td><td></td><td></td><td></td> <td></td><td></td><td></td><td></td></tr>
+                   <tr><td>a</td><td></td><td></td><td></td> <td></td><td></td><td></td><td></td></tr>
+                   <tr><td>a</td><td></td><td></td><td></td> <td></td><td></td><td></td><td></td></tr>
+                   <tr><td>a</td><td></td><td></td><td></td> <td></td><td></td><td></td><td></td></tr>
+                   <tr><td>a</td><td></td><td></td><td></td> <td></td><td></td><td></td><td></td></tr>
+                   <tr><td>a</td><td></td><td></td><td></td> <td></td><td></td><td></td><td></td></tr>
+                   <tr><td>a</td><td></td><td></td><td></td> <td></td><td></td><td></td><td></td></tr>
+  </table>
+</div>
+	<hr width=50%>
+  <h5 align="center">Developed by :- <a href="v.html" target="_blank"><strong><u>Vinay Saurabh </u>(Front End)</strong></a> and  <a href="p.html" target="_blank"><strong><u>Parth Gaba</u> (Back End)</strong></a></h5>
+   <hr width=50%>
+</body>

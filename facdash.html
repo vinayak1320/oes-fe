@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Faculty's Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 10;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+ 
+}
+
+#a1 {background-color: black;}
+
+#a3 {background-color: black;}
+#a4 {background-color: black;}
+#a5 {background-color: black;}
+#a6 {background-color: black;}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: blue}
+.btn {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #3e8e41;
+  color: white;
+}
+input[type=text]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+</style>
+  
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+      <link rel="stylesheet" href="./style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="vin.png" type="image/png">
+</head>
+<body><div class="row">
+  <div class="column">
+    <h2 align="left">Faculty Dashboard<hr align="left" width=33%></h2>
+
+  </div>
+  <div class="column">
+    <p align="right">Welcome <font color="blue">//Faculty name//</font> <strong><button type="button" onclick="alert('Are you sure you want to exit!')">Logout!</button></strong></p><hr align="right" width=40%>
+  </div>
+</div>
+<button class="tablink" onclick="openPage('a1', this, 'black')" id="defaultOpen">View Your Tests</button>
+
+<button class="tablink" onclick="openPage('a3', this, 'black')">Modify Tests </button>
+
+
+<button class="tablink" onclick="openPage('a6', this, 'black')">Add New Test</button>
+
+<div id="a1" class="tabcontent">
+ <form>
+ 		<div style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th><u>Test Date</u></th>
+      <th><u>Test Duration</u></th>
+      <th><u>Total Questions</u></th>
+      <th><u>Questions in Exam</u></th>
+      <th><u>Total Marks</u></th>
+      <th><u>Correct Marks</u></th>
+      <th><u>Incorrect Marks</u></th>
+      <th><u>Course & Streams</u></th>
+    </tr>
+    <tr>
+      <td>25/04/2019</td>
+      <td>60</td>
+      <td>120</td>
+      <td>60</td>
+      <td>60</td>
+      <td>1</td>
+      <td>-1</td>
+      <td>B.Tech CSE</td>
+          </tr>
+      <tr>
+      <td>26/04/2019</td>
+      <td>60</td>
+      <td>120</td>
+      <td>60</td>
+      <td>60</td>
+      <td>1</td>
+      <td>0</td>
+      <td>B.Tech CSE Leet</td>
+          </tr>
+
+           <tr>
+      <td>27/04/2019</td>
+      <td>60</td>
+      <td>120</td>
+      <td>60</td>
+      <td>60</td>
+      <td>1</td>
+      <td>-1</td>
+      <td>BCA</td>
+          </tr>
+    
+ 	</table></div>
+ </form>
+</div>
+<div id="a3" class="tabcontent">
+ <br>
+<div class="container">
+  <form action="">
+    <font color="white"><label for="tdate">Enter Your Test Date</label></font>
+    <input type="text" id="tdate" name="tdate" placeholder="DD/MM/YYYY">
+    <input type="submit" value="Fetch Data" onclick="showdata()"><br>
+    <div id="row" style="display:none"><br>
+    	 <form>
+ 		<div style="overflow-x:auto;">
+  <table bgcolor="black">
+    <tr>
+    	<th><u>Test ID</u></th>
+      <th><u>Test Date</u></th>
+      <th><u>Test Duration</u></th>
+      <th><u>Total Questions</u></th>
+      <th><u>Questions in Exam</u></th>
+      <th><u>Total Marks</u></th>
+      <th><u>Correct Marks</u></th>
+      <th><u>Incorrect Marks</u></th>
+      <th><u>Course & Streams</u></th>
+      <th><u>Actions</u></th>
+    </tr>
+    <tr>
+    	<td>ABC11</td>
+      <td>25/04/2019</td>
+      <td>60</td>
+      <td>120</td>
+      <td>60</td>
+      <td>60</td>
+      <td>1</td>
+      <td>-1</td>
+      <td>B.Tech CSE</td>
+      <td>//Delete//</td>
+          </tr>
+          <td>ABC12</td>
+      <td>25/04/2019</td>
+      <td>60</td>
+      <td>120</td>
+      <td>60</td>
+      <td>60</td>
+      <td>1</td>
+      <td>-1</td>
+      <td>B.Tech CSE Leet</td>
+       <td>//Delete//</td>
+          </tr>
+ 	</table></div><br>
+ </form>
+ <form>
+ 	<font color="white"><label for="testid">Enter Your Test ID</label></font>
+    <input type="text" id="testid" name="testid" placeholder="Enter Test ID from above table { ANY ONE }">
+ 	<font color="white"><label for="ntdate">Enter Your New Test Date</label></font>
+    <input type="text" id="tdate" name="tdate" placeholder="DD/MM/YYYY">
+
+    <font color="white"><label for="ntdur">Enter New Test Duration</label></font>
+    <input type="text" id="ntdur" name="ntdur" placeholder="Enter Test Duration In Minutes">
+
+    <font color="white"><label for="ntqt">Enter No. of questions in Test</label></font>
+    <input type="text" id="ntqt" name="ntqt" placeholder="Enter The no. of questions you want in one single Test">
+
+    <font color="white"><label for="ntmarks">Enter New Total Marks</label></font>
+    <input type="text" id="ntmarks" name="ntmarks" placeholder="Enter New Total Marks">
+
+    <font color="white"><label for="ncorr">Enter New Correct marks</label></font>
+    <input type="text" id="ncorr" name="ncorr" placeholder="Enter Marks on Each Correct Answer">
+
+    <font color="white"><label for="incorr">Enter New Incorrect marks</label></font>
+    <input type="text" id="incorr" name="incorr" placeholder="Enter Marks on Each Incorrect Answer">
+ <p align="right"><input type="submit" value="Confirm Modification !" onclick="savedatatofirebase()"></p>
+ </form>
+</div>
+  </form>
+</div>
+</div>  
+</div>
+<div id="a6" class="tabcontent">
+  <p align="center"><a href="./addtest.html"><button class="btn">Click Here to go to add test page</button></a></p>
+</div>
+<div>
+				<hr width=50%>
+                <h5 align="center">Developed by :- <a href="v.html" target="_blank"><strong><u>Vinay Saurabh </u>(Front End)</strong></a> and  <a href="p.html" target="_blank"><strong><u>Parth Gaba</u> (Back End)</strong></a></h5>
+                <hr width=50%>
+</div>
+<script>
+function showdata() {
+  var x = document.getElementById("row");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+                <script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>
