@@ -61,8 +61,7 @@ body, html {
 #a1 {background-color: black;}
 
 #a3 {background-color: black;}
-#a4 {background-color: black;}
-#a5 {background-color: black;}
+#a7 {background-color: black;}
 #a6 {background-color: black;}
 table {
   border-collapse: collapse;
@@ -135,11 +134,11 @@ input[type=submit]:hover {
 </div>
 <button class="tablink" onclick="openPage('a1', this, 'black')" id="defaultOpen">View Your Tests</button>
 
-<button class="tablink" onclick="openPage('a3', this, 'black')">Modify Tests </button>
+<button class="tablink" onclick="openPage('a3', this, 'black')" id="row">Modify Tests </button>
 
 
 <button class="tablink" onclick="openPage('a6', this, 'black')">Add New Test</button>
-
+<button class="tablink" onclick="openPage('a7', this, 'black')">View And Modify Questions</button>
 <div id="a1" class="tabcontent">
  <form>
  		<div style="overflow-x:auto;">
@@ -192,13 +191,13 @@ input[type=submit]:hover {
 <div id="a3" class="tabcontent">
  <br>
 <div class="container">
-  <form action="">
+  <form>
     <font color="white"><label for="tdate">Enter Your Test Date</label></font>
     <input type="text" id="tdate" name="tdate" placeholder="DD/MM/YYYY">
-    <input type="submit" value="Fetch Data" onclick="showdata()"><br>
-    <div id="row" style="display:none"><br>
+    <input type="submit" value="Fetch Data"><br>
+    <div><br>
     	 <form>
- 		<div style="overflow-x:auto;">
+ 		<div>
   <table bgcolor="black">
     <tr>
     	<th><u>Test ID</u></th>
@@ -257,6 +256,7 @@ input[type=submit]:hover {
 
     <font color="white"><label for="incorr">Enter New Incorrect marks</label></font>
     <input type="text" id="incorr" name="incorr" placeholder="Enter Marks on Each Incorrect Answer">
+    <p>Upload Updated Excel Sheet</p><input type="file" name="quest in excel" accept=".xlsx">
  <p align="right"><input type="submit" value="Confirm Modification !" onclick="savedatatofirebase()"></p>
  </form>
 </div>
@@ -267,21 +267,91 @@ input[type=submit]:hover {
 <div id="a6" class="tabcontent">
   <p align="center"><a href="./addtest.html"><button class="btn">Click Here to go to add test page</button></a></p>
 </div>
+<div id="a7" class="tabcontent">
+ <br>
+<div class="container">
+  <form>
+    <font color="white"><label for="tdate">Enter Your Test Date</label></font>
+    <input type="text" id="tdate" name="tdate" placeholder="DD/MM/YYYY">
+    <input type="submit" value="Fetch Data"><br>
+    <br>
+    	 </form>
+  <table bgcolor="black">
+    <tr>
+    	<th><u>Test ID</u></th>
+      <th><u>Test Date</u></th>
+      <th><u>Test Duration</u></th>
+      <th><u>Total Questions</u></th>
+      <th><u>Questions in Exam</u></th>
+      <th><u>Total Marks</u></th>
+      <th><u>Correct Marks</u></th>
+      <th><u>Incorrect Marks</u></th>
+      <th><u>Course & Streams</u></th>
+      <th><u>Actions</u></th>
+    </tr>
+    <tr>
+    	<td>ABC11</td>
+      <td>25/04/2019</td>
+      <td>60</td>
+      <td>120</td>
+      <td>60</td>
+      <td>60</td>
+      <td>1</td>
+      <td>-1</td>
+      <td>B.Tech CSE</td>
+      <td>/View/ Edit/ Update /</td>
+          </tr>
+          <td>ABC12</td>
+      <td>25/04/2019</td>
+      <td>60</td>
+      <td>120</td>
+      <td>60</td>
+      <td>60</td>
+      <td>1</td>
+      <td>-1</td>
+      <td>B.Tech CSE Leet</td>
+       <td>/View/ Edit/ Update /</td>
+          </tr>
+ 	</table>
+ 	<div>
+ 		<ol>
+    	<li><h1>Question 1 ?</h1><h2 align="right">Edit</h2>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label> <hr>
+
+<li><h1>Question 2 ?</h1><h2 align="right">Edit</h2>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label> <hr>
+
+<li><h1>Question 3 ?</h1><h2 align="right">Edit</h2>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label> <hr>
+
+<li><h1>Question 4 ?</h1><h2 align="right">Edit</h2>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label>
+<label class="container">One<input type="radio" name="1"><span class="checkmark"></span></label> <hr>
+
+  
+  
+
+  </div>
+ 	</div>
+ </div>
 <div>
 				<hr width=50%>
                 <h5 align="center">Developed by :- <a href="v.html" target="_blank"><strong><u>Vinay Saurabh </u>(Front End)</strong></a> and  <a href="p.html" target="_blank"><strong><u>Parth Gaba</u> (Back End)</strong></a></h5>
                 <hr width=50%>
 </div>
-<script>
-function showdata() {
-  var x = document.getElementById("row");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-</script>
+
+
                 <script>
 function openPage(pageName,elmnt,color) {
   var i, tabcontent, tablinks;

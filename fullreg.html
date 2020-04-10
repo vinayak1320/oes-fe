@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Details</title>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+  <link rel="shortcut icon" href="vin.png" type="image/png">
+  <meta charset="utf-8">
+		<link rel="stylesheet" href="./style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+
+		<!-- DATE-PICKER -->
+		<link rel="stylesheet" href="vendor/date-picker/css/datepicker.min.css">
+
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="css/style.css">
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  
+}
+
+tr:nth-child(even){}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+</style>
+<script src="js/courses.js"></script>
+</head>
+<body>
+  <font face="Comic Sans MS"><br><br>
+    <p align="right"> <strong><button type="button" onclick="alert('Are you sure you want to exit ?')" style='margin-right: 15px;'>Logout!</button></strong></p>
+		<div class="wrapper">
+            <form action=""id="rform" class="demoForm">
+            	<div class="form-header">
+                  <h2> -----> Registration is necessary in order to proceed to Scholarship Test <----- </h2>
+                 </div>
+
+                 <div class="form-header">
+                 <br><h2>Fields marked with star ( * ) are mandatory to fill.</h2><br>
+             	</div>
+            	<div id="wizard">
+            		<!-- SECTION 1 -->
+	                <h4></h4>
+	                <p>Fill in your correct personal details</p><hr>
+	                	<div class="form-row">
+	                    	<label for="sname">
+	                    	* Your Name
+	                    	</label>
+	                    	<div class="form-holder">
+	                    		<input type="text" class="form-control" placeholder="Enter your Full Name">
+	                    	</div>
+	                    </div>
+	                    <div class="form-row">
+	                    	<label for="email">
+	                    	Your Email
+	                    	</label>
+	                    	<div class="form-holder">
+	                    		<input type="text" class="form-control" placeholder="E-mail">
+	                    	</div>
+	                    </div>		
+	                    <div class="form-row">
+	                    	<label for="mob">
+	                    	* Your Mobile no.
+	                    	</label>
+	                    	<div class="form-holder">
+	                    		<input type="text" class="form-control" placeholder="Mobile no.">
+	                    	</div>
+	                    </div>	
+	                     <div class="form-row">
+	                    	<label for="uid">
+	                    	* Aadhar / Passport Details
+	                    	</label>
+	                    	<div class="form-holder">
+	                    		<input type="text" class="form-control" placeholder="Aadhar / Passport no.">
+	                    	</div>
+	                    </div>	
+	                     <div class="form-row">
+	                    	<label for="fname">
+	                    	* Your Father's Name
+	                    	</label>
+	                    	<div class="form-holder">
+	                    		<input type="text" class="form-control" placeholder="Father's Name">
+	                    	</div>
+	                    </div>	
+	                    <div class="form-row">
+	                    	<label for="dob">
+	                    		* Date of Birth:
+	                    	</label>
+	                    	<div class="form-holder">
+	                    		<input type="text" class="form-control datepicker-here" data-language='en' data-date-format="dd - mm - yyyy" id="dp1">
+	                    	</div>
+	                    </div>	
+	                    <div class="form-row" >
+	                    	<label for="catg">
+	                    		* Category
+	                    	</label>
+	                    	<div class="form-holder">
+	                    		<select name="" id="" class="form-control">
+									<option value="c1" class="option">Gen.</option>
+									<option value="c2" class="option">OBC</option>
+									<option value="c3" class="option">SC</option>
+									<option value="c4" class="option">ST</option>
+									<option value="c5" class="option">Minority</option>
+								</select>
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>	
+	                    <div class="form-row">
+	                    	<label for="gender">
+	                    		* Gender
+	                    	</label>
+	                    	<div class="form-holder">
+	                    		<select name="" id="" class="form-control">
+									<option value="g1" class="option">Male</option>
+									<option value="g2" class="option">Female</option>
+									<option value="g3" class="option">Transgender</option>
+									<option value="g4" class="option">LGBTQ</option>
+								</select>
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>	
+	                     <div class="form-row">
+                        <label for="addr">
+                          * Permanent Address with PIN Code
+                        </label>
+                        <div class="form-holder">
+                          <textarea name="addr" placeholder="Your complete address"></textarea>
+                      </div>
+                      </div>  
+                      
+	              
+	                
+					<!-- SECTION 2 -->
+	                <h4></h4>
+	                <br><br>
+	                   
+	                    	<div><p>Fill In your correct educational qualifications</p><hr>
+                          <table border="3">
+                            <tr>
+                            <th>Class</th>
+                            <th>Board</th>
+                            <th>Stream/Branch</th>
+                            <th>Percentage or CGPA</th>
+                            <th>Year of Passing</th>
+                          </tr>
+                          <tr>
+                            <td>* 10<sup>th</sup></td>
+                            <td><input type="text" name="10brd"></td>
+                            <td>General</td>
+                            <td><input type="text" name="10pr"></td>
+                            <td><input type="text" name="10yop"></td>
+                          </tr>
+                          <tr>
+                            <td>12<sup>th</sup></td>
+                            <td><input type="text" name="12brd"></td>
+                            <td>
+                              <div class="form-holder">
+                            <select name="" id="" class="form-control">
+                               <option value="c1" class="option">PCM</option>
+                                 <option value="c2" class="option">PCM+B</option>
+                                    <option value="c3" class="option">Arts</option>
+                                      <option value="c4" class="option">Commerce</option>
+                            </select>
+                <i class="zmdi zmdi-caret-down"></i>
+                        </div></td>
+                            <td><input type="text" name="12pr"></td>
+                            <td><input type="text" name="12yop"></td>
+                          </tr>
+                               <tr>
+                            <td>Diploma</td>
+                            <td><input type="text" name="dipbrd"></td>
+                            <td><input type="text" name="dipcrs"></td>
+                            <td><input type="text" name="dippr"></td>
+                            <td><input type="text" name="dipyop"></td>
+                          </tr>
+                            <tr>
+                            <td>Graduation</td>
+                            <td><input type="text" name="gradbrd"></td>
+                            <td><input type="text" name="gradcrs"></td>
+                            <td><input type="text" name="gradpr"></td>
+                            <td><input type="text" name="gradyop"></td>
+                          </tr>
+
+         </table><hr>
+         <p>Scholarship and Admission Details</p>
+         <hr>
+                      <div class="form-row">
+                        <label for="addr">
+                          * Select Desired Program
+                        </label>
+                        <div class="form-holder">
+                          <select id="slct1" name="slct1" onchange="populate(this.id,'slct2')" class="form-control">
+                          <option value="">-----Choose Any One-----</option>
+                           <option value="btech">B.Tech</option>
+                           <option value="btechl">B.Tech - Leet -</option>
+                           <option value="mtech">M.Tech</option>
+                           <option value="dip">Diploma</option>
+                           <option value="dipl">Diploma - Leet -</option>
+                           <option value="bba">BBA</option>
+                           <option value="mba">MBA</option>
+                           <option value="bca">BCA</option>
+                           <option value="bvoc">B.Voc</option>
+                          </select>
+                          <i class="zmdi zmdi-caret-down"></i>
+                        </div>
+                      </div>  <hr>
+                      <div class="form-row">
+                        <label for="addr">
+                          * Select Desired Stream
+                        </label>
+                        <div class="form-holder">
+                          <select id="slct2" name="slct2"class="form-control"></select><i class="zmdi zmdi-caret-down"></i>
+                        </div>
+                      </div> <hr>
+                      <div class="form-row">
+                        <label for="addr">
+                          * Preferred Date and Time of Test
+                        </label>
+                        <div class="form-holder">
+                          <input type="text box" class="form-control" placeholder="Enter Your Choice in DD/MM/YYYY/hh/mm">
+                          </div>
+                      </div>   
+                        </div>	
+	               
+
+	                <!-- SECTION 3 -->
+	                <h4></h4>
+	                <br><br>
+	                <p>Please read the following instructions carefully and then submit this form Finally</p><hr>
+	                    		<input type="checkbox" checked> I hereby solemnly affirm that the information furnished by me in this form is true & correct and nothing has been concealed.  If it is found that any information therein is fraudulent and / or incorrect in material particulars.  I understand that my admission is liable to be cancelled and legal action can be taken against me.<br>
+ 								I undertake to pay  the fees as prescribed in full at the time of admission  and  shall pay further fees if required as per  the rules of Institute /  University. I have noted that tuition fees and other fees are not refundable under any circumstances.  I will abide by the rules of the institute as laid down by the management from time to time, also I will not indulge myself in any unlawful activity including ragging during my stay in the institute.
+ <span class="checkmark"></span>
+							</label>
+							<p align="right"> |||<input type="submit" value="Submit registration details">|||</p><br>
+							<p align="right"> |||<input type="submit" onclick="reset()" value="Reset Form">|||</p>
+						</div>
+	               
+            	</div>
+
+            </form>
+		</div>
+<hr>
+                <h5 align="center">Developed by :- <a href="v.html" target="_blank"><strong>Vinay Saurabh (Front End)</strong></a> and  <a href="p.html" target="_blank"><strong>Akash Mathur (Back End)</strong></a></h5>
+              <hr>
+		<script src="js/jquery-3.3.1.min.js"></script>
+				<!-- JQUERY STEP -->
+
+<script>
+function reset() {
+  document.getElementById("rform").reset();
+}
+</script>
+		
+		<!-- DATE-PICKER -->
+		<script src="vendor/date-picker/js/datepicker.js"></script>
+		<script src="vendor/date-picker/js/datepicker.en.js"></script>
+		<script src="js/main.js"></script>                  
+</body>
+</html>	
